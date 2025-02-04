@@ -1,0 +1,275 @@
+A<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore schools across all provinces of Rwanda. Learn about ordinary and upper-level schools in Rwanda.">
+    <meta name="keywords" content="Rwanda schools, education in Rwanda, ordinary level schools, upper level schools">
+    <meta name="author" content="Rwanda Schools Portal">
+    <title>Rwanda Schools Portal</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Neon Text Effects */
+        h1, h2, h3 {
+            text-align: center;
+            color: #fff;
+            text-shadow:
+                0 0 5px #00fffc,
+                0 0 10px #00fffc,
+                0 0 20px #00fffc,
+                0 0 40px #00fffc;
+        }
+
+        /* Header and Navigation */
+        header {
+            background: linear-gradient(135deg, #34495e, #2c3e50);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: slideDown 0.5s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: background-color 0.3s ease, text-shadow 0.3s ease;
+            text-shadow:
+                0 0 5px #00fffc,
+                0 0 10px #00fffc;
+        }
+
+        nav a:hover {
+            background-color: #1abc9c;
+            border-radius: 5px;
+            text-shadow:
+                0 0 10px #00fffc,
+                0 0 20px #00fffc;
+        }
+
+        /* Sections */
+        section {
+            padding: 40px 20px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            max-width: 1200px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Home Section */
+        #home {
+            background-image: url('school-background.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        #home h1 {
+            font-size: 3.5rem;
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 5px #00fffc, 0 0 10px #00fffc, 0 0 20px #00fffc, 0 0 40px #00fffc; }
+            to { text-shadow: 0 0 10px #00fffc, 0 0 20px #00fffc, 0 0 40px #00fffc, 0 0 80px #00fffc; }
+        }
+
+        /* About Section */
+        #about {
+            text-align: center;
+        }
+
+        #about p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        /* School Gallery */
+        .school-gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .school-gallery img {
+            width: 30%;
+            border: 2px solid #00fffc;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .school-gallery img:hover {
+            transform: scale(1.05);
+            box-shadow:
+                0 0 10px #00fffc,
+                0 0 20px #00fffc;
+        }
+
+        /* Help Section */
+        #help {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: 2px solid #00fffc;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: box-shadow 0.3s ease, background-color 0.3s ease;
+            box-shadow:
+                0 0 5px #00fffc,
+                0 0 10px #00fffc,
+                0 0 20px #00fffc;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            box-shadow:
+                0 0 10px #00fffc,
+                0 0 20px #00fffc,
+                0 0 40px #00fffc;
+        }
+
+        #help-message {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        #help-message.show {
+            opacity: 1;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, #34495e, #2c3e50);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #00fffc;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+        
+        
+            <a href="#gallery">Gallery</a>
+            
+            <a href="b.html">Home</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Welcome to Rwanda Schools Portal</h1>
+        <p>Your gateway to exploring schools across Rwanda.</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            The Rwanda Schools Portal is dedicated to providing comprehensive information about schools across all provinces of Rwanda. 
+            Whether you're looking for ordinary level schools or upper level schools, we have you covered. Our mission is to make education 
+            accessible and transparent for everyone.
+        </p>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <h2>School Gallery</h2>
+        <div class="school-gallery">
+            <img src="ordinary_school1.jpg" alt="Ordinary School 1">
+            <img src="ordinary_school2.jpg" alt="Ordinary School 2">
+            <img src="ordinary_school3.jpg" alt="Ordinary School 3">
+            <img src="upper_school1.jpg" alt="Upper School 1">
+            <img src="upper_school2.jpg" alt="Upper School 2">
+            <img src="upper_school3.jpg" alt="Upper School 3">
+        </div>
+    </section>
+
+    <!-- Help Section -->
+    <section id="help">
+        <h2>Need Help?</h2>
+        <p>If you have any questions or need assistance, feel free to reach out to us!</p>
+        <button onclick="showHelp()">Click for Help</button>
+        <div id="help-message">
+            <p>Contact us via email at <strong>support@rwandaschools.com</strong> or call <strong>+250 123 456 789</strong>.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Rwanda Schools Portal</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Show Help Message
+        function showHelp() {
+            const helpMessage = document.getElementById('help-message');
+            helpMessage.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
